@@ -58,4 +58,4 @@ for group in groups:
 '''
 
 database = QueryPostGIS('localhost', 'osm_tucson', 'adrian', 'password')
-database.query_for_data('planet_osm_line', 'landuse')
+database.query_for_data('planet_osm_polygon', 'boundary')
