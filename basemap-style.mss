@@ -12,6 +12,7 @@
 
 Map {
   background-image:url('images/faded_parchment.jpg');
+  buffer-size:256;
 }
 
 #planetosmline {
@@ -90,16 +91,6 @@ Map {
 }
 
 #planetosmpolygon {
-  [boundary='administrative'] {
-    ::outline {line-color:@saturated-brown;}
-    polygon-fill:@light-brown;
-    polygon-opacity:0.2;
-  }
-  [boundary='national_park'] {
-    ::outline {line-color:@olive;}
-    polygon-fill:@olive;
-    polygon-opacity:0.4;
-  }
   [natural='sand'] {polygon-fill:@orange-brown;}
   [natural='sand'] {polygon-fill:@orange-brown;}
   [natural='water'] {polygon-fill:@blue;}
@@ -108,12 +99,66 @@ Map {
     building-height:5;
   }
   [landuse='grass'] {polygon-fill:@olive;}
-  [landuse='farmland'] {polygon-fill:@olive;}
+  [landuse='farmland'] {
+    ::outline {
+      line-color:@olive;
+      line-width:0.1;
+    }
+    polygon-fill:@olive;
+    polygon-opacity:0.4;  
+  }
   [landuse='residential'] {polygon-fill:@light-brown;}
   [landuse='recreation_ground'] {polygon-fill:@olive;}
   [landuse='reservoir'] {polygon-fill:@blue;}
   [water='reservoir'] {polygon-fill:@blue;}
   [water='lake;pond'] {polygon-fill:@blue;}
   [waterway='riverbank'] {polygon-fill:@blue;}
-  [area='yes'] {polygon-fill:@saturated-brown;}  
+  [admin_level='8'] {
+    ::outline {line-color:@saturated-brown;}
+    polygon-fill:@light-brown;
+    polygon-opacity:0.4;
+  }
+  [admin_level='7'] {
+    ::outline {line-color:@desaturated-brown;}
+    polygon-fill:@dark-brown;
+    polygon-opacity:0.2;
+  }
+  [leisure='park'] {
+    ::outline {line-color:@olive;}
+    polygon-fill:@olive;
+    polygon-opacity:0.6;
+  }
+  [leisure='golf_course'] {
+    ::outline {line-color:@olive;}
+    polygon-fill:@olive;
+    polygon-opacity:0.6;
+  }
+  [boundary='national_park'] {
+    ::outline {
+      line-color:@olive;
+      line-width:0.1;
+    }
+    polygon-fill:@olive;
+    polygon-opacity:0.4;
+  }
+  [leisure='pitch'] {
+    polygon-fill:@orange-brown;
+    polygon-opacity:0.4;
+  }
+  [leisure='common'] {
+    polygon-fill:@olive;
+    polygon-opacity:0.4;
+  }
+  [leisure='dog_park'] {
+    polygon-fill:@orange-brown;
+    polygon-opacity:0.4;
+  }
+  [leisure='garden'] {
+    polygon-fill:@orange-brown;
+    polygon-opacity:0.4;
+  }
+  [leisure='playground'] {
+    polygon-fill:@orange-brown;
+    polygon-opacity:0.4;
+  }
 }
